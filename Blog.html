@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Blog</title>
+    <link rel="stylesheet" href="blogStyles.css">
+</head>
+<title>Recipe Blog</title>
+<body>
+    <header>
+        <h2 id="pageTitle">Blake's Recipe Blog</h2>
+    </header>
+    <div id="ErrorDiv">
+        <label style="display: none" id="lbError"></label>
+    </div>
+    <div  id="homePage">        
+        <button id="openRecipeBlog" style="width: 25vw;">Add a Recipe</button>
+        <div id="recipeList"></div>
+    </div>
+    <div id="recipeDetailsPage" style="display: none;"></div>
+
+    <div id="recipeBlogPage" style="display: none;">
+        <button id="closeRecipeBlog" style="width: 25vw;">Back to Blog</button>
+        <form id="recipeForm">
+            <label for="title"><b>Recipe Title:</b></label>
+            <input type="text" id="title" name="title" required><br>
+            <label for="description"><b>Recipe Description:</b></label>
+            <textarea id="description" name="description" required></textarea><br>
+            <label for="ingredients"><b>Ingredients:</b></label>
+            <textarea id="ingredients" name="ingredients" placeholder="Enter ingredients separated by commas" required></textarea><br>
+            <label for="steps"><b>Steps:</b></label>
+            <textarea id="steps" name="steps" placeholder="Enter steps separated by commas" required></textarea><br>
+            <label for="description"><b>Blog/Story:</b></label>
+            <textarea id="blog" name="blog" required></textarea><br>
+            <label for="difficulty"><b>Difficulty:</b></label>
+            <select id="difficulty" name="difficulty" required>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select><br>
+            <button type="submit" style="margin: 0 auto; display: block; width: auto">Add Recipe</button>
+        </form>
+
+        <div id="recipeList"></div>
+    </div>
+
+    <script src="blogScript.js"></script>
+</body>
+</html>
